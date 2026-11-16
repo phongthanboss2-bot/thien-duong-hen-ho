@@ -50,9 +50,21 @@ export default function HomePage() {
           <p>
             Xin chào, <strong>{email}</strong>
           </p>
-          <button onClick={handleLogout} style={button}>
-            Đăng xuất
-          </button>
+          <div
+            style={{
+              display: 'flex',
+              gap: 12,
+              justifyContent: 'center',
+              flexWrap: 'wrap',
+            }}
+          >
+            <Link href="/profile" style={button}>
+              Hồ sơ của tôi
+            </Link>
+            <button onClick={handleLogout} style={button}>
+              Đăng xuất
+            </button>
+          </div>
         </div>
       ) : (
         <div
